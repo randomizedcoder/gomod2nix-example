@@ -17,17 +17,7 @@
         in
         rec {
           packages.default = pkgs.callPackage ./. { };
-          packages.container = pkgs.dockerTools.buildImage {
-            name = "example";
-            tag = "0.1";
-            created = "now";
-            copyToRoot = pkgs.buildEnv {
-              name = "image-root";
-              paths = [ packages.default ];
-              pathsToLink = [ "/bin" ];
-            };
-            config.Cmd = [ "${packages.default}/bin/example" ];
-          };
+          packages.container = pkgs.callPackage ./container.nix { package = packages.default; };
           devShells.default = import ./shell.nix { inherit pkgs; };
         })
     );
