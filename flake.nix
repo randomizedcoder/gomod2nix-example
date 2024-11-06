@@ -1,3 +1,8 @@
+#
+# flake.nix
+#
+# https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix3-flake.html
+#
 {
   description = "A basic gomod2nix flake";
 
