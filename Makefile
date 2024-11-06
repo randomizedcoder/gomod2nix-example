@@ -7,7 +7,8 @@ go:
 	nix run
 
 load_docker:
-	docker load < result && docker run --rm example:0.1
+	docker load < result
+	docker run --rm example:0.1
 	docker image ls | grep example
 
 check:
