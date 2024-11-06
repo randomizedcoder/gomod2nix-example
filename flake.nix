@@ -6,7 +6,13 @@
 {
   description = "A basic gomod2nix flake";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  # Release 23.11 (“Tapir”, 2023.11/29)
+  # https://nixos.org/manual/nixos/stable/release-notes.html
+  # inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs/nixos-23.11";
+
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+  #inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.gomod2nix.url = "github:nix-community/gomod2nix";
 

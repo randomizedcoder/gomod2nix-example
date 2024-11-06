@@ -3,6 +3,8 @@
 # https://spacekookie.de/blog/ocitools-in-nixos/
 # https://nixos.org/manual/nixpkgs/stable/#ssec-pkgs-dockerTools-buildImage
 
+#pkgs.dockerTools.buildLayeredImage {
+
 pkgs.dockerTools.buildImage {
   name = "example";
   tag = "0.1";
